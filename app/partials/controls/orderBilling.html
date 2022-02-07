@@ -8,8 +8,9 @@
     </div>
     <div collapse="checkOutSection != 'billing'" class="panel-body">
         <div>
-            <billingmessage />
-        </div>
+  <billingmessage />
+</div>
+<sameasshipaddresscheckbox></sameasshipaddresscheckbox>
         <div ng-show="billaddressform || (billaddresses.length == 0 && user.Permissions.contains('CreateBillToAddress'))">
             <addressinput address='billaddress' user='user'></addressinput>
         </div>

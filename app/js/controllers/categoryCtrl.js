@@ -44,6 +44,9 @@ function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 
     // panel-nav
     $scope.navStatus = Nav.status;
+    //default the category panel to be collapsed
+    $scope.navStatus.visible = true;
+    
     $scope.toggleNav = Nav.toggle;
 	$scope.$watch('sort', function(s) {
 		if (!s) return;

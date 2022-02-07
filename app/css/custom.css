@@ -4,3 +4,334 @@ Theme name: My SPA Theme
 Version: 1.0
 Template: Howdy
 */
+
+.main-wrapper {
+  background-color:#FFFFFF;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.jumbotron {
+  margin:0px;
+  background-color: transparent;
+  padding:0px;
+}
+.jumbotron h2 img {
+  max-height: 100%;
+}
+.jumbotron h2 {
+  max-height: 100%;
+  text-align: center;
+}
+    .home-message-panel {
+    max-height: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container,.fixed-footer-bottom,
+    .container-view {
+        width: 730px;
+    }
+    .jumbotron {
+    padding-top: 0;
+    padding-bottom: 0;
+    }
+    .home-message-panel {
+    max-height: 100%;
+    text-align: center;
+}
+.panel-product-list ul li.inline {
+    width: 50%;
+}
+}
+@media (min-width: 992px) {
+    .container,.fixed-footer-bottom,
+    .container-view {
+        width: 950px;
+    }
+    .jumbotron {
+    padding-top: 0;
+    padding-bottom: 0;
+    }
+        .home-message-panel {
+    max-height: 100%;
+    text-align: center;
+}
+.panel-product-list ul li.inline {
+    width: 33%;
+}
+}
+@media (min-width: 1200px) {
+    .container,.fixed-footer-bottom,
+    .container-view {
+        width: 1150px;
+    }
+    .jumbotron {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+    .home-message-panel {
+    max-height: 100%;
+    text-align: center;
+}
+.panel-product-list ul li.inline {
+    width: 33%;
+}
+}
+
+/* Custom CSS Area Here */
+
+.thumbnail img {
+    max-height: 300px;
+    max-width: 100%;
+    margin: 0;
+}
+
+.thumbnail {
+    padding:20px 4px;
+}
+
+.navbar .container .navbar-nav.pull-left li.fadeInLeft a i, .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
+    color: #ffffff;
+}
+
+.navbar .container .navbar-nav li.active .fa-caret-down {
+    color: #003B71;
+}
+
+.navbar {
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 0;
+    border:none;
+}
+
+.container-view {
+    min-height: 700px;
+    padding-bottom: 100px;
+}
+
+.fixed-footer-bottom {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: soleil, sans-serif;
+}
+p, .p {
+font-family: soleil, sans-serif;
+}
+
+body {
+font-family: soleil, sans-serif;
+        color: #000000;
+        font-weight:400;
+}
+
+.product-image-large {
+    box-shadow: none;
+}
+
+.product-image-large {
+    margin: 0 auto;
+    max-height: 500px;
+    max-width: 100%;
+}
+
+.dropdown-menu, .dropdown-mega .dropdown-menu {
+    z-index: 999999999999;
+}
+
+.well {
+    border:none;
+}
+
+.panel-nav ul li ul li {
+    padding-left: 30px;
+}
+
+.panel-nav ul li a {
+    font-weight: 700;
+    width: 100%;
+    padding: 3px 0;
+    font-size: 1.35em;
+}
+
+a:hover, a:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-default {
+    border-color: #074ca1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-default, .btn-default:hover {
+    color: #fff;
+}
+.btn-default {
+    background-color: #074ca1;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #ffff;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    color: #fff;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #ffffff;
+}
+
+.container .navbar-nav li a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background-color: #5f9d3e;
+}
+
+.container .navbar-nav li.active>a {
+    color: #fff;
+    background-color: #5f9d3e;
+}
+
+.container .navbar-nav li.active a:focus {
+    color: #fff;
+    background-color: #5f9d3e;
+}
+
+
+
+/*HOME MESSAGE PANEL*/
+.home-message-panel {
+    background-image: url('https://www.four51.com/Themes/Custom/0dfb95b2-d4b0-4cdf-8ae8-62bf8173b155/JFS-Banner.png');
+    background-color: rgb(102,102,102);
+    background-size: 100%;
+    background-position: center;
+    color:#fff;
+    padding: 2% 10%;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.panel-home {
+    color:#fff;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px;
+    background-color: rgba(255,255,255,.5);
+}
+
+.panel-product-list ul li.inline h3 {
+    margin: 0 0 7px;
+    min-height: 80px;
+}
+
+.form-control:focus {
+    border-color: #b8d432;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    background-color: rgb(248, 248, 248);
+}
+
+.view-form-icon label {
+    top: -25px;
+    font-size: 16px;
+    position: absolute;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+label.required {
+    color: #666666;
+}
+
+input.ng-invalid, textarea.ng-invalid, select.ng-invalid, input.ng-invalid:invalid, textarea.ng-invalid:invalid, select.ng-invalid:invalid {
+    border-color: red;
+    border-width: 1px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #ccc;
+}
+
+/*spec forms image selector*/
+.selection-thumbnail .photo-selection {
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.selection-thumbnail .photo-selection.selected {
+    border: 2px solid red;
+    border-radius: 15px;
+}
+
+.btn-default {
+    background-color: #003B71;
+}
+
+.btn-default {
+    border-color: #003B71;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    color: #fff;
+    background-color: #003B71;
+    border-color: #003B71;
+}
+
+.text-warning {
+    color: #ffffff;
+}
+
+/*hover effects*/
+.selection-thumbnail img {
+    background-color:#fff;
+    position:relative;
+}
+.selection-thumbnail img:hover {
+    z-index:10;
+}
+
+p[id="\34 51qa_prod_desc"].ng-binding ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0px 20px 10px;
+}

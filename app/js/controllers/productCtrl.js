@@ -116,7 +116,11 @@ function ($scope, $routeParams, $route, $location, $451, Product, ProductDisplay
 				}
 		);
 	};
-
+    
+    $scope.goToKit = function(prodID){
+		$location.path('/customKit/' + $scope.LineItem.Product.InteropID + '/' + prodID);
+	};
+	
 	$scope.setOrderType = function(type) {
 		$scope.loadingIndicator = true;
 		$scope.currentOrder = { 'Type': type };

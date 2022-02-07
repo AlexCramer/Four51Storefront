@@ -8,10 +8,7 @@
         <loadingindicator ng-show="couponLoadingIndicator" title="{{'Please wait while we verify and apply your promotion code' | r | xlat}}" />
         <loadingindicator ng-show="couponRemoveIndicator" title="{{'Please wait while we remove your promotion code' | r | xlat}}" />
         <orderconfirmationmessage />
-        <p>
-            <span class="text-info">{{'Items' | r | xlat}}</span>
-            <span class="pull-right">{{currentOrder.LineItems.length}}</span>
-        </p>
+        <checkoutitemsummary></checkoutitemsummary>
         <p ng-if="!(user.Permissions.contains('HidePricing'))">
             <span class="text-info">{{'Subtotal' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.Subtotal | culturecurrency}}</span>
@@ -35,13 +32,14 @@
                                 <button type="button" class="btn btn-success" ng-click="applyCoupon()"><i class="fa fa-check"></i></button>
                             </span>
                         </div>
-                        <i class="fa fa-question-circle"></i>
+                        <i class="fa fa-tag"></i>
                     </div>
                 </div>
             </div>
             <p ng-show="currentOrder.Coupon">
-                <span class="text-info">{{currentOrder.Coupon.Label}}:</span>{{currentOrder.Coupon.OrderDiscount * -1 | culturecurrency}}<br/>
-            </p>
+                <span class="text-info">{{currentOrder.Coupon.Label}}:</span>
+                <span class="pull-right ng-binding">{{currentOrder.Coupon.OrderDiscount * -1 | culturecurrency}}</span><br/>
+                            </p>
             <div ng-show="currentOrder.Coupon">
                 <button type="button"  class="btn btn-danger pull-right" ng-click="removeCoupon()">Remove {{'Coupon' | r | xlat}}</button>
                 <p class="text-left" ng-show="currentOrder.Coupon.ExpirationDate"><small class="text-danger">{{'Expires' | r | xlat}}: {{currentOrder.Coupon.ExpirationDate | date:user.Culture.DateFormat.short}}</small></p>
@@ -60,7 +58,7 @@
                 <label ng-show="currentOrder.ExternalOrderDetailRecipients">{{('Email' | r) + ' ' + ('Notification' | r) | xlat}}</label>
                 <input class="form-control" ng-disabled="cart_shipping.$invalid || cart_order.$invalid || cart_billing.$invalid" type="email" ng-model="currentOrder.ExternalOrderDetailRecipients" placeholder="{{('Email' | r) + ' ' +  ('Address' | r) | xlat}}" autocomplete="off" />
                 <i class="fa fa-envelope-o"></i>
-                <span class="help-block text-left"><small>{{'Send a copy of the order details to above email address.' | r | xlat}}</small></span>
+                <span class="help-block text-left"><small>{{'Provide an email address if you would like to receive ' + ('Notification' | r) + 's concerning this order.' | r | xlat}}</small></span>
             </div>
         </div>
         <button class="btn btn-default" redirect="/security">
