@@ -215,10 +215,6 @@ a:hover, a:focus {
     color: #ffffff;
 }
 
-.container .navbar-nav li a {
-    color: #fff;
-}
-
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: #fff;
     background-color: #5f9d3e;
