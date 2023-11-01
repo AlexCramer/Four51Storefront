@@ -22,7 +22,7 @@ function ($scope, $route, $location, $451, User, Order, Security, OrderConfig, C
 				$('.navbar-fixed-bottom, .headroom.navbar-fixed-top').css("position", "relative");
 			})
 			.on('blur', ':input', function (e) {
-				$('.navbar-fixed-bottom, .headroom.navbar-fixed-top').css("position", "fixed");
+				$('.navbar-fixed-bottom, .headroom.navbar-fixed-top').css("position", "relative");
 			});
 	}
 
