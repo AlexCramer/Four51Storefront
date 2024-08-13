@@ -4,7 +4,7 @@
         <div id="login_box">
             <div id="login_form" class="animated bounceIn">
                 <form class="form-signin" ng-submit="login()" name="login_form">
-                    <h2 class="animated fadeIn text-center">{{'Four51 Storefront 2.0' | r}}</h2>
+                    <h2 class="animated fadeIn text-center">{{'ZIPARI' | r}}</h2>
                     <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
                     <div>
                         <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset && (loginMessage != 'Your password has expired and will need to be changed.')">
@@ -44,18 +44,11 @@
                         </div>
                         <div>
                             <p class="alert alert-info" ng-show="showEmailHelp && (!EmailNotFoundException || !PasswordSecurityException)">
-                                If you would like to be reminded of your {{'Username' | r}} or have the option to reset your {{'Password' | r}}, please provide your email address and your log on information will be emailed to you immediately.
+                                If you would like to be reminded of your {{'Username' | r}} or have the option to reset your {{'Password' | r}}. Please email <strong><a href="mailto:information@evo-creative.com">information@evo-creative.com</a></strong> and your log on information will be emailed to you shortly.
                             </p>
                             <btn class="btn btn-info btn-block" ng-show="!showEmailHelp && !PasswordReset && !EmailNotFoundException && !PasswordSecurityException" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Submit'">
                                 Need help logging on?
                             </btn>
-                            <div class="view-form-icon" ng-show="showEmailHelp">
-                                <div>
-                                    <label ng-show="credentials.Email">{{'Email' | r}}</label>
-                                    <input class="form-control" type="email" ng-model="credentials.Email" placeholder="{{'Email' | r}}" />
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                            </div>
                             <btn class="btn btn-info btn-block" ng-show="showEmailHelp" ng-click="showEmailHelp = !showEmailHelp; buttonText = 'Logon'">
                                 Return to logon
                             </btn>
