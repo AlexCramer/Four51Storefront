@@ -24,8 +24,8 @@
 							<div class="col-sm-3"><b>Quantity</b></div>
 						</li>
 						<li class="row kit-item-row" ng-repeat="item in Kit.KitItems" ng-click="setItemAsCurrent(item)">
-							<div ng-class="{active: item.ID == ActiveKitItem.ID}">
-								<div class="col-sm-6">{{item.Variant.ExternalID}}</div>
+                            <div ng-class="{active: item.ID == ActiveKitItem.ID}">
+                                <div class="col-sm-6">{{item.Name || item.Variant.ExternalID}}</div>
 								<div class="col-xs-6 col-sm-3"><span class="hidden-md hidden-lg hidden-sm">Quantity: </span>{{item.Quantity}}</div>
 								<div class="col-xs-6 col-sm-3">
 									<span ng-hide="item.LineItem.IsConfigurable"><i class="fa fa-ban"></i></span>
