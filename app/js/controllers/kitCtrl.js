@@ -1,4 +1,4 @@
-four51.app.controller('KitCtrl', ['$scope', '$location', '$routeParams', 'Kit', 'ProductDisplayService', 'Order', 'User', function($scope, $location, $routeParams, Kit, ProductDisplayService, Order, User) {
+four51.app.controller('KitCtrl',  ['$scope',  '$location',  '$routeParams',  'Kit',  'ProductDisplayService',  'Order',  'User', 'Product',  function($scope,  $location,  $routeParams,  Kit,  ProductDisplayService,  Order, User) User, Product)  {
 	$scope.addToOrderText = 'Add Kit to Cart';
 	$scope.updateKitLineItemText = 'Update';
 
@@ -17,6 +17,13 @@ four51.app.controller('KitCtrl', ['$scope', '$location', '$routeParams', 'Kit', 
 		}
 		$scope.LineItem.IsKitParent = true;
 		$scope.Kit = kit;
+		/*NEW CODE TO DISPLAY KIT COMPONENT ITEM NAME INSTEAD OF ID*/
+        angular.forEach($scope.Kit.KitItems,function(el){
+            Product.get(el.Variant.InteropID,function(p){
+               el.Name = p.Name;
+            });
+        });
+        /*END NEW CODE*/
 		setupProduct(kit.KitParent, null, null, function(){
 			if ($scope.LineItem.ID) {
 				$scope.addToOrderText = 'Update Kit';
