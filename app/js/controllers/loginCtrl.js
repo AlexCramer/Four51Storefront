@@ -46,6 +46,7 @@ function ($scope, $sce, $route, $location, User) {
 					$scope.credentials.Password = null;
 				}
 				delete $scope.credentials;
+				$location.path('catalog')
 			},
 			function(ex) {
 				$scope.credentials = {};
